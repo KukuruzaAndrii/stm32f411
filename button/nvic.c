@@ -131,7 +131,7 @@ exti_sysconfig ( int gpio, int pin, int line )
 	    return;
 
 	sp->exti_conf[l_index] &= ~(0xf<<l_shift);
-	sp->exti_conf[l_index] |= ~(p_val<<l_shift);
+	sp->exti_conf[l_index] |= p_val<<l_shift;
 }
 
 static vfptr exti_hook;

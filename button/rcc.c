@@ -120,6 +120,7 @@ struct rcc {
 /* On APB2 */
 #define UART1_ENABLE	0x10
 #define UART3_ENABLE	0x20
+#define SYSCFG_ENABLE	0x4000
 
 /* In the PLL register */
 
@@ -367,6 +368,7 @@ rcc_init ( void )
 
 	rp->apb2_e |= UART1_ENABLE;
 	rp->apb2_e |= UART3_ENABLE;
+	rp->apb2_e |= SYSCFG_ENABLE;
 
 	cpu_clock_init ();
 }
